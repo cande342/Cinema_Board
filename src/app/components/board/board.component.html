@@ -1,0 +1,8 @@
+<!-- board.component.html -->
+<div class="board" cdkDropListGroup> 
+  <!-- Itera sobre las listas en el board -->
+ <app-list *ngFor="let list of lists" [list]="list" cdkDrag>
+  </app-list>
+
+  <app-create-task (taskAdded)="onTaskAdded($event)"></app-create-task>
+</div> 

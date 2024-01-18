@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+  /* En tu archivo de estilos global o específico del componente */
+h2 {
+  font-family: 'Shizuru', sans-serif;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.col-md-3 {
+  background-color:#76777c;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}

@@ -1,0 +1,45 @@
+.task {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0.1em 0.1em 0.5em lightgrey;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para que la descripción aparezca debajo del título */
+    margin: 0 0 6px 0;
+    padding: 6px 6px 2px 8px;
+  }
+  
+  .task--urgent {
+    border-left: 5px solid salmon;
+  }
+  
+  .task--moderate {
+    border-left: 5px solid lightseagreen;
+  }
+  
+  .task--low {
+    border-left: 5px solid lightgoldenrodyellow;
+  }
+  
+  .task__title {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .task__description {
+    flex: 1 1 100%;
+    max-height: 50px; /* Establece la altura máxima deseada para la descripción */
+    overflow: hidden;
+  }
+  
+  .task__read-more {
+    cursor: pointer;
+    color: blue;
+  }
+  
+  .task__read-more:hover {
+    text-decoration: underline;
+  }
+  
+  
+  

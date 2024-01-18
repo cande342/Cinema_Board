@@ -1,0 +1,39 @@
+<form *ngIf="createTask" [formGroup]="createTask" (ngSubmit)="onFormAdd()" novalidate>
+  <header class="form__header">
+    <h3 class="form__header__title">Añadir Contenido</h3>
+  </header>
+
+  <!-- Nuevo campo de título -->
+  <div class="mb-3">
+    <label for="title" class="form-label">Título</label>
+    <input type="text" class="form-control" id="title" formControlName="title" required>
+    <div class="invalid-feedback">El título es <strong>requerido</strong></div>
+  </div>
+
+  <!-- Campo de prioridad -->
+  <div class="mb-3">
+    <label for="priority" class="form-label">Seleccione una prioridad</label>
+    <select class="form-control" id="priority" name="priority" formControlName="priority" required>
+      <option value="" selected></option>
+      <option *ngFor="let priority of priorities" [value]="priority.value">
+        {{ priority.viewValue }}
+      </option>
+    </select>
+    <div class="invalid-feedback">Prioridad es <strong>requerida</strong></div>
+  </div>
+<!-- Campo de descripción -->
+  <div class="mb-3">
+    <label for="description" class="form-label">Descripción</label>
+    <textarea class="form-control" 
+              id="description"
+              formControlName="description"
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="1"
+              cdkAutosizeMaxRows="5"></textarea>
+    <div class="invalid-feedback">Descripción es <strong>requerida</strong></div>
+  </div>
+
+  <!-- Botón de enviar -->
+  <button type="submit" class="btn btn-primary" [disabled]="!createTask.valid">Crear</button>
+</form>

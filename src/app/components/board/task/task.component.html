@@ -1,0 +1,20 @@
+<div 
+  class="task"
+  [class.task--urgent]="task.priority === 'urgent'"
+  [class.task--moderate]="task.priority === 'moderate'"
+  [class.task--low]="task.priority === 'low'"
+  id="task_{{task.id}}"
+>
+
+<div class="task" [class.task--urgent]="task.priority === 'urgent'" [class.task--moderate]="task.priority === 'moderate'" [class.task--low]="task.priority === 'low'" id="task_{{task.id}}">
+  <div class="task__icon">
+    <i *ngIf="task.priority === 'urgent'" class="bi bi-alarm" aria-label="urgent icon"></i>
+    <i *ngIf="task.priority === 'moderate'" class="bi bi-autorenew" aria-label="moderate icon"></i>
+    <i *ngIf="task.priority === 'low'" class="bi bi-assignment-returned" aria-label="low icon"></i>
+  </div>
+  <h3 class="task__title">{{task.title}}</h3>
+  <p class="task__description">{{task.description}}</p>
+</div>
+
+
+
