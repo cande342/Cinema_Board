@@ -34,6 +34,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "Cinema_Board",
               "budgets": [
                 {
                   "type": "initial",
